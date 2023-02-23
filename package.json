@@ -12,6 +12,7 @@
     "vuepress-theme-vdoing": "^1.12.8"
   },
   "dependencies": {
+    "dayjs": "^1.11.7",
     "vuepress-plugin-cursor-effects": "^1.1.6"
   }
 }

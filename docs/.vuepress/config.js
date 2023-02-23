@@ -1,4 +1,4 @@
-
+const dayjs = require('dayjs')
 const DOMAIN_NAME = 'UzumakiItachi.com' // 域名 (不带https)
 const WEB_SITE = `https://${DOMAIN_NAME}` // 网址
 
@@ -120,12 +120,10 @@ module.exports = {
 
         // pageStyle: 'line', // 页面风格，可选值：'card'卡片 | 'line' 线（未设置bodyBgImg时才生效）， 默认'card'。 说明：card时背景显示灰色衬托出卡片样式，line时背景显示纯色，并且部分模块带线条边框
 
-        // bodyBgImg: [
-        //   'https://fastly.jsdelivr.net/gh/xugaoyi/image_store/blog/20200507175828.jpeg',
-        //   'https://fastly.jsdelivr.net/gh/xugaoyi/image_store/blog/20200507175845.jpeg',
-        //   'https://fastly.jsdelivr.net/gh/xugaoyi/image_store/blog/20200507175846.jpeg'
-        // ], // body背景大图，默认无。 单张图片 String | 多张图片 Array, 多张图片时隔bodyBgImgInterval切换一张。
-        // bodyBgImgOpacity: 0.5, // body背景图透明度，选值 0.1~1.0, 默认0.5
+        bodyBgImg: [
+          'https://s1.ax1x.com/2023/02/23/pSxhk24.jpg',
+        ], // body背景大图，默认无。 单张图片 String | 多张图片 Array, 多张图片时隔bodyBgImgInterval切换一张。
+        bodyBgImgOpacity: 1, // body背景图透明度，选值 0.1~1.0, 默认0.5
         // bodyBgImgInterval: 15, // body多张背景图时的切换间隔, 默认15，单位s
         // titleBadge: false, // 文章标题前的图标是否显示，默认true
         // titleBadgeIcons: [ // 文章标题前图标的地址，默认主题内置图标
@@ -134,10 +132,10 @@ module.exports = {
         // ],
         // contentBgStyle: 1, // 文章内容块的背景风格，默认无. 1 方格 | 2 横线 | 3 竖线 | 4 左斜线 | 5 右斜线 | 6 点状
 
-        // updateBar: { // 最近更新栏
-        //   showToArticle: true, // 显示到文章页底部，默认true
-        //   moreArticle: '/archives' // “更多文章”跳转的页面，默认'/archives'
-        // },
+        updateBar: { // 最近更新栏
+          showToArticle: true, // 显示到文章页底部，默认true
+          moreArticle: '/archives' // “更多文章”跳转的页面，默认'/archives'
+        },
         // rightMenuBar: false, // 是否显示右侧文章大纲栏，默认true (屏宽小于1300px下无论如何都不显示)
         // sidebarOpen: false, // 初始状态是否打开左侧边栏，默认true
         // pageButton: false, // 是否显示快捷翻页按钮，默认true
@@ -147,14 +145,14 @@ module.exports = {
 
         // 文章默认的作者信息，(可在md文件中单独配置此信息) string | {name: string, link?: string}
         author: {
-            name: 'xugaoyi', // 必需
-            link: 'https://github.com/xugaoyi', // 可选的
+            name: 'hanhanbuku', // 必需
+            link: 'https://github.com/hanhanbuku/', // 可选的
         },
         // 博主信息 (显示在首页侧边栏)
         blogger: {
-            avatar: 'https://fastly.jsdelivr.net/gh/xugaoyi/image_store/blog/20200103123203.jpg',
+            avatar: 'https://s1.ax1x.com/2023/02/23/pSx7beH.jpg',
             name: 'UzumakiItachi',
-            slogan: '前端界的小学生',
+            slogan: '起风了，唯有努力生存。',
         },
         // 社交图标 (显示于博主信息栏和页脚栏。内置图标：https://doc.xugaoyi.com/pages/a20ce8/#social)
         social: {
@@ -179,7 +177,7 @@ module.exports = {
         },
         // 页脚信息
         footer: {
-            createYear: 2019, // 博客创建年份
+            createYear: 2023, // 博客创建年份
             copyrightInfo:
                 'UzumakiItachi | <a href="https://github.com/xugaoyi/vuepress-theme-vdoing/blob/master/LICENSE" target="_blank">MIT License</a>', // 博客版权信息、备案信息等，支持a标签或换行标签</br>
         },
