@@ -11,7 +11,7 @@ push_branch=gh-pages # 推送的分支
 
 user_name=`git log -1 --pretty=format:'%an'` # 获取用户名
 user_email=`git log -1 --pretty=format:'%ae'` # 获取邮箱
-password = wangyuhan0329.
+password= "wangyuhan0329."
 echo $user_name
 echo $user_email
 echo $push_addr
