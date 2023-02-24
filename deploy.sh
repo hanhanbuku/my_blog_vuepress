@@ -11,11 +11,9 @@ push_branch=gh-pages # 推送的分支
 
 user_name=`git log -1 --pretty=format:'%an'` # 获取用户名
 user_email=`git log -1 --pretty=format:'%ae'` # 获取邮箱
-password= "wangyuhan0329."
 echo $user_name
 echo $user_email
 echo $push_addr
-echo $password
 # 生成静态文件
 npm run docs:build
 
@@ -28,7 +26,7 @@ git config --global user.name $user_name
 git config --global user.email $user_email
 git add -A
 git commit -m "deploy, $commit_info"
-git push -f  $user_name:$password@https://github.com/hanhanbuku/my_blog_vuepress.git HEAD:$push_branch  # HEAD 当前工作的分支
+git push -f  $user_name:wangyuhan0329.@https://github.com/hanhanbuku/my_blog_vuepress.git HEAD:$push_branch  # HEAD 当前工作的分支
 
 cd -
 rm -rf $dist_path  # 删除构建产物
