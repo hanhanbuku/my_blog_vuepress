@@ -24,7 +24,7 @@ git config user.name $user_name
 git config user.email $user_email
 git add -A
 git commit -m "deploy, $commit_info"
-git push -f $push_addr HEAD:$push_branch  # HEAD 当前工作的分支
+git push -f https://github.com/hanhanbuku/my_blog_vuepress.git HEAD:$push_branch  # HEAD 当前工作的分支
 
 cd -
 rm -rf $dist_path  # 删除构建产物
