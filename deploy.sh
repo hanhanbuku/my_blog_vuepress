@@ -23,8 +23,8 @@ cd $dist_path
 
 git init
 
-git config user.name $user_name
-git config user.email $user_email
+git config --global user.name $user_name
+git config --global user.email $user_email
 git add -A
 git commit -m "deploy, $commit_info"
 git push -f https://github.com/hanhanbuku/my_blog_vuepress.git HEAD:$push_branch  # HEAD 当前工作的分支
