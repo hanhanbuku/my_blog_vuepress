@@ -73,7 +73,7 @@ features: # 可选的
 #vanilla-box {
   color: #11a8cd;
 }
-</style>
+</style> 
 ```
 :::
 
