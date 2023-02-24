@@ -26,7 +26,7 @@ git config --global user.name $user_name
 git config --global user.email $user_email
 git add -A
 git commit -m "deploy, $commit_info"
-git push -f  $user_name:'wangyuhan0329.'@https://github.com/hanhanbuku/my_blog_vuepress.git HEAD:$push_branch  # HEAD 当前工作的分支
+git push -f  https://$user_name:'wangyuhan0329.'@github.com/hanhanbuku/my_blog_vuepress.git HEAD:$push_branch  # HEAD 当前工作的分支
 
 cd -
 rm -rf $dist_path  # 删除构建产物
