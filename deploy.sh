@@ -9,13 +9,19 @@ commit_info=`git describe --all --always --long`
 dist_path=dist # 打包生成的文件夹路径
 push_branch=gh-pages # 推送的分支
 
+user_name=`git log -1 --pretty=format:'%an'` # 获取用户名
+user_email=`git log -1 --pretty=format:'%ae'` # 获取邮箱
 # 生成静态文件
 npm run docs:build
 
 # 进入生成的文件夹
 cd $dist_path
 
+
 git init
+
+git config user.name $user_name
+git config user.email $user_email
 git add -A
 git commit -m "deploy, $commit_info"
 git push -f $push_addr HEAD:$push_branch  # HEAD 当前工作的分支
