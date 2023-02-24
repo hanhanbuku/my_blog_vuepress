@@ -11,12 +11,15 @@ push_branch=gh-pages # 推送的分支
 
 user_name=`git log -1 --pretty=format:'%an'` # 获取用户名
 user_email=`git log -1 --pretty=format:'%ae'` # 获取邮箱
+
+echo $user_name
+echo $user_email
+echo $push_addr
 # 生成静态文件
 npm run docs:build
 
 # 进入生成的文件夹
 cd $dist_path
-
 
 git init
 
