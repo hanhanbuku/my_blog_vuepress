@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: https://s1.ax1x.com/2023/02/23/pSx7beH.jpg
+heroImage: https://pic.imgdb.cn/item/63fca046f144a01007247ce4.jpg 
 heroText: UzumakiItachi's blog
 tagline: 木叶飞舞之处，火亦生生不息。
 footer: MIT Licensed | Copyright © 2018-present Evan You
@@ -12,15 +12,15 @@ features: # 可选的
 - title: 前端
   details: JavaScript、ES6、Vue框架等前端技术
   link: /web/ # 可选
-  imgUrl: https://s1.ax1x.com/2023/02/23/pSxbZEd.jpg # 可选
+  imgUrl: https://pic.imgdb.cn/item/63fca046f144a01007247d77.jpg # 可选
 - title: 页面
   details: html(5)/css(3)，前端页面相关技术
   link: /ui/
-  imgUrl: https://s1.ax1x.com/2023/02/23/pSxbeUA.jpg
+  imgUrl: https://pic.imgdb.cn/item/63fca046f144a01007247d46.jpg
 - title: 技术
   details: 技术文档、教程、技巧、总结等文章
   link: /technology/
-  imgUrl: https://s1.ax1x.com/2023/02/23/pSxbm4I.jpg
+  imgUrl: https://pic.imgdb.cn/item/63fca023f144a01007242e89.jpg
 
 # 文章列表显示方式: detailed 默认，显示详细版文章列表（包括作者、分类、标签、摘要、分页等）| simple => 显示简约版文章列表（仅标题和日期）| none 不显示文章列表
 # postList: detailed

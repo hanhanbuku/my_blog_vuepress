@@ -19,35 +19,9 @@ module.exports = {
                 items: [
                     // 说明：以下所有link的值只是在相应md文件头部定义的永久链接（不是什么特殊编码）。另外，注意结尾是有斜杠的
                     {
-                        text: '前端文章',
-                        items: [
-                            { text: 'JavaScript', link: '/pages/8143cc480faf9a11/' },
-                        ],
-                    },
-                    {
                         text: '学习笔记',
                         items: [
-                            { text: '《JavaScript教程》', link: '/note/javascript/' },
-                            { text: '《JavaScript高级程序设计》', link: '/note/js/' },
-                            { text: '《ES6 教程》', link: '/note/es6/' },
-                            { text: '《Vue》', link: '/note/vue/' },
-                            { text: '《React》', link: '/note/react/' },
-                            {
-                                text: '《TypeScript 从零实现 axios》',
-                                link: '/note/typescript-axios/',
-                            },
-                            {
-                                text: '《Git》',
-                                link: '/note/git/',
-                            },
-                            {
-                                text: 'TypeScript',
-                                link: '/pages/51afd6/',
-                            },
-                            {
-                                text: 'JS设计模式总结',
-                                link: '/pages/4643cd/',
-                            },
+                            { text: '《HTML》', link: '/05.HTML/01.html/' },
                         ],
                     },
                 ],
@@ -104,7 +78,7 @@ module.exports = {
         sidebar: 'structuring',
         sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
         // logo: '/img/logo.png', // 导航栏logo
-        repo: 'xugaoyi/vuepress-theme-vdoing', // 导航栏右侧生成Github链接
+        repo: 'hanhanbuku/my_blog_vuepress', // 导航栏右侧生成Github链接
         searchMaxSuggestions: 10, // 搜索结果显示最大数
         lastUpdated: '上次更新', // 开启更新时间，并配置前缀文字   string | boolean (取值为git提交时间)
         docsDir: 'docs', // 编辑的文件夹
@@ -113,19 +87,19 @@ module.exports = {
         editLinkText: '编辑',
         //*** 以下是Vdoing主题相关配置，文档：https://doc.xugaoyi.com/pages/a20ce8/ ***//
 
-        // category: false, // 是否打开分类功能，默认true
-        // tag: false, // 是否打开标签功能，默认true
-        // archive: false, // 是否打开归档功能，默认true
+        category: true, // 是否打开分类功能，默认true
+        tag: true, // 是否打开标签功能，默认true
+        archive: true, // 是否打开归档功能，默认true
         // categoryText: '随笔', // 碎片化文章（_posts文件夹的文章）预设生成的分类值，默认'随笔'
 
         // pageStyle: 'line', // 页面风格，可选值：'card'卡片 | 'line' 线（未设置bodyBgImg时才生效）， 默认'card'。 说明：card时背景显示灰色衬托出卡片样式，line时背景显示纯色，并且部分模块带线条边框
 
         bodyBgImg: [
-          'https://s1.ax1x.com/2023/02/23/pSxhk24.jpg',
+          'https://pic.imgdb.cn/item/63fca038f144a01007245d99.jpg',
         ], // body背景大图，默认无。 单张图片 String | 多张图片 Array, 多张图片时隔bodyBgImgInterval切换一张。
         bodyBgImgOpacity: 1, // body背景图透明度，选值 0.1~1.0, 默认0.5
         // bodyBgImgInterval: 15, // body多张背景图时的切换间隔, 默认15，单位s
-        // titleBadge: false, // 文章标题前的图标是否显示，默认true
+        titleBadge: true, // 文章标题前的图标是否显示，默认true
         // titleBadgeIcons: [ // 文章标题前图标的地址，默认主题内置图标
         //   '图标地址1',
         //   '图标地址2'
@@ -150,7 +124,7 @@ module.exports = {
         },
         // 博主信息 (显示在首页侧边栏)
         blogger: {
-            avatar: 'https://s1.ax1x.com/2023/02/23/pSx7beH.jpg',
+            avatar: 'https://pic.imgdb.cn/item/63fca046f144a01007247d23.jpg',
             name: 'UzumakiItachi',
             slogan: '起风了，唯有努力生存。',
         },
@@ -166,12 +140,12 @@ module.exports = {
                 {
                     iconClass: 'icon-github',
                     title: 'GitHub',
-                    link: 'https://github.com/xugaoyi',
+                    link: 'https://github.com/hanhanbuku/',
                 },
                 {
-                    iconClass: 'icon-erji',
-                    title: '听音乐',
-                    link: 'https://music.163.com/#/playlist?id=755597173',
+                    iconClass: 'icon-gitee',
+                    title: 'Gitee',
+                    link: 'https://gitee.com/wangyuhan123',
                 },
             ],
         },
