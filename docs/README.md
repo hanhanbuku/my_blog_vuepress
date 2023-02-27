@@ -13,9 +13,9 @@ features: # 可选的
   details: JavaScript、ES6、Vue框架等前端技术
   link: /web/ # 可选
   imgUrl: https://pic.imgdb.cn/item/63fca046f144a01007247d77.jpg # 可选
-- title: 页面
+- title: 框架
   details: html(5)/css(3)，前端页面相关技术
-  link: /ui/
+  link: /frame/
   imgUrl: https://pic.imgdb.cn/item/63fca046f144a01007247d46.jpg
 - title: 技术
   details: 技术文档、教程、技巧、总结等文章

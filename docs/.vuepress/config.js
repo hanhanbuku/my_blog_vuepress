@@ -27,11 +27,31 @@ module.exports = {
                 ],
             },
             {
-                text: '页面',
-                link: '/ui/',
+                text: '框架',
+                link: '/frame/',
                 items: [
-                    { text: 'HTML', link: '/pages/8309a5b876fc95e3/' },
-                    { text: 'CSS', link: '/pages/0a83b083bdf257cb/' },
+                    {
+                        text: 'Vue',
+                        items:[
+                            {
+                                text: 'Vue2',
+                                link: '/frame/Vue2/'
+                            },
+                            {
+                                text: 'Vue3',
+                                link: '/frame/Vue3/'
+                            },
+                        ]
+                  },
+                    {
+                        text:'React',
+                        items:[
+                            {
+                                text: 'React_18',
+                                link: '/pages/ea217b/'
+                            },
+                        ]
+                    }
                 ],
             },
             {
