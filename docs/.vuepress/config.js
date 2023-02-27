@@ -8,7 +8,7 @@ module.exports = {
     theme:'vdoing',
     dest: './dist',
     port: '8080',
-    // base: '/', // 默认'/'。如果你想将你的网站部署到如 https://foo.github.io/bar/，那么 base 应该被设置成 "/bar/",（否则页面将失去样式等文件）
+    base: '/my_blog_vuepress/', // 默认'/'。如果你想将你的网站部署到如 https://foo.github.io/bar/，那么 base 应该被设置成 "/bar/",（否则页面将失去样式等文件）
     themeConfig: {
         // 导航配置
         nav: [
