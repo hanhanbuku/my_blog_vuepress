@@ -30,6 +30,7 @@ jobs:
         run: |
           remote_addr=`git remote get-url --push origin`
           commit_info=`git describe --all --always --long`
+          branch=`git branch --sort=committerdate`
           user_name=`git log -1 --pretty=format:'%an'`
           user_email=`git log -1 --pretty=format:'%ae'`
           deploy_branch=gh-pages
@@ -41,7 +42,7 @@ jobs:
           git config user.name ${user_name}
           git config user.email ${user_email}
           git add -A
-          git commit -m "auto deploy, $commit_info"
+          git commit -m "触发构建分支${branch}, $commit_info"
           remote_addr=`echo $remote_addr | awk -F'://' '{print $2}'`
           remote_addr=https://${user_name}:${{secrets.CI_TOKEN}}@${remote_addr}
           git remote add origin ${remote_addr}
