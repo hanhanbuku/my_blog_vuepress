@@ -20,10 +20,10 @@ npm run docs:build
 # 进入生成的文件夹
 cd $dist_path
 
-git init
+#git init
 
-git config --global user.name $user_name
-git config --global user.email $user_email
+#git config --global user.name $user_name
+#git config --global user.email $user_email
 git add -A
 git commit -m "deploy, $commit_info"
 git push -f  https://$user_name:'wangyuhan0329.'@github.com/hanhanbuku/my_blog_vuepress.git HEAD:$push_branch  # HEAD 当前工作的分支
