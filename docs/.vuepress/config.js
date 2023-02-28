@@ -309,6 +309,10 @@ module.exports = {
             zIndex: 999999999, // z-index property of the canvas, default: 999999999
         }
         ],
+        //阅读进度插件
+        [
+            'reading-progress'
+        ]
     ],
     lastUpdated: 'Last Updated',
     searchMaxSuggestoins: 10,

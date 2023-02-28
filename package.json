@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "dayjs": "^1.11.7",
-    "vuepress-plugin-cursor-effects": "^1.1.6"
+    "vuepress-plugin-cursor-effects": "^1.1.6",
+    "vuepress-plugin-reading-progress": "^1.0.10"
   }
 }
