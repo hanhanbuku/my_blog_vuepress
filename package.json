@@ -18,6 +18,7 @@
     "dayjs": "^1.11.7",
     "vuepress-plugin-comment": "^0.7.3",
     "vuepress-plugin-cursor-effects": "^1.1.6",
+    "vuepress-plugin-one-click-copy": "^1.0.6",
     "vuepress-plugin-reading-progress": "^1.0.10"
   }
 }
