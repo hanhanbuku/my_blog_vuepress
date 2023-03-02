@@ -276,11 +276,11 @@ module.exports = {
             {
                 choosen: 'gitalk',
                 options: {
-                    clientID: 'a6e1355287947096b88b',
-                    clientSecret: 'f0e77d070fabfcd5af95bebb82b2d574d7248d71',
-                    repo: 'blog-gitalk-comment', // GitHub 仓库
-                    owner: 'xugaoyi', // GitHub仓库所有者
-                    admin: ['xugaoyi'], // 对仓库有写权限的人
+                    clientID: '060c6c92841566af1d39',
+                    clientSecret: '3356583f16e94f45035b1bb57711783ccae1160a',
+                    repo: 'my_blog_vuepress', // GitHub 仓库
+                    owner: 'hanhanbuku', // GitHub仓库所有者
+                    admin: ['hanhanbuku'], // 对仓库有写权限的人
                     // distractionFreeMode: true,
                     pagerDirection: 'last', // 'first'正序 | 'last'倒序
                     id: '<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>', //  页面的唯一标识,长度不能超过50
@@ -312,7 +312,22 @@ module.exports = {
         //阅读进度插件
         [
             'reading-progress'
-        ]
+        ],
+        // 这个插件将会向 page 对象注入预计阅读时间与字数统计。
+        [
+            "@mr-hope/reading-time",
+            {
+                // 配置选项
+            },
+        ],
+        //动态标题展示
+        ['dynamic-title', {
+            showIcon: 'https://pic.imgdb.cn/item/63fca046f144a01007247d77.jpg',
+            showText: '客官欢迎回来~',
+            hideIcon: 'https://pic.imgdb.cn/item/63fca046f144a01007247d77.jpg',
+            hideText: '客官不要走嘛~',
+            recoverTime: 2000,
+        }]
     ],
     lastUpdated: 'Last Updated',
     searchMaxSuggestoins: 10,
