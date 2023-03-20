@@ -10,11 +10,11 @@ footer: MIT Licensed | Copyright © 2018-present Evan You
 
 features: # 可选的
 - title: 前端
-  details: JavaScript、ES6、Vue框架等前端技术
+  details: JavaScript、ES6、CSS、HTML等前端技术
   link: /web/ # 可选
   imgUrl: https://pic.imgdb.cn/item/63fca046f144a01007247d77.jpg # 可选
 - title: 框架
-  details: html(5)/css(3)，前端页面相关技术
+  details: Vue，React，前端框架相关技术
   link: /frame/
   imgUrl: https://pic.imgdb.cn/item/63fca046f144a01007247d46.jpg
 - title: 技术

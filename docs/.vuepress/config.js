@@ -19,10 +19,8 @@ module.exports = {
                 items: [
                     // 说明：以下所有link的值只是在相应md文件头部定义的永久链接（不是什么特殊编码）。另外，注意结尾是有斜杠的
                     {
-                        text: '学习笔记',
-                        items: [
-                            { text: '《HTML》', link: '/05.HTML/01.html/' },
-                        ],
+                        text: 'JavaSript',
+                        link: '/web/#JavaScript',
                     },
                 ],
             },
@@ -48,7 +46,7 @@ module.exports = {
                         items:[
                             {
                                 text: 'React_18',
-                                link: '/pages/ea217b/'
+                                link: '/frame/React/'
                             },
                         ]
                     }
@@ -58,10 +56,11 @@ module.exports = {
                 text: '技术',
                 link: '/technology/',
                 items: [
-                    { text: '技术文档', link: '/pages/9a7ee40fc232253e/' },
-                    { text: 'GitHub技巧', link: '/pages/4c778760be26d8b3/' },
-                    { text: 'Nodejs', link: '/pages/117708e0af7f0bd9/' },
-                    { text: '博客搭建', link: '/pages/41f87d890d0a02af/' },
+                    { text: 'WebPack', link: '/technology/#WebPack' },
+                    { text: '浏览器相关', link: '/technology/#浏览器相关' },
+                    { text: '工程化相关', link: '/technology/#工程化相关' },
+                    { text: '工作中遇到的问题以及解决方案', link: '/technology/#工作中遇到的问题以及解决方案' },
+                    { text: 'Git', link: '/technology/#Git' },
                 ],
             },
             {
