@@ -6,15 +6,18 @@
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "docs:deploy": "bash deploy.sh"
+    "docs:deploy": "bash deploy.sh",
+    "mp-ci": "node mp-ci.js"
   },
   "devDependencies": {
     "@mr-hope/vuepress-plugin-reading-time": "^1.30.0",
     "vuepress": "^1.9.8",
     "vuepress-plugin-dynamic-title": "^1.0.0",
+    "vuepress-plugin-zooming": "^1.1.8",
     "vuepress-theme-vdoing": "^1.12.8"
   },
   "dependencies": {
+    "@wangyuhan329/mp-ci": "^1.0.2",
     "dayjs": "^1.11.7",
     "vuepress-plugin-comment": "^0.7.3",
     "vuepress-plugin-cursor-effects": "^1.1.6",
