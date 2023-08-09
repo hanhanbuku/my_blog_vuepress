@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue3响应式</title>
+</head>
+<body>
+<input id="input">
+<div id="text"></div>
+<script>
+    const handleProxy = {
+        get(target, key) {
+            const res = Reflect.get(target,key)
+            //  收集依赖
+            track(target,key)
+            return res
+        },
+        set(target,key,value){
+           const res = Reflect.set(target,key,value)
+            // 触发依赖
+            trigger(target,key)
+            return res
+        }
+    }
+    // 创建reactive函数
+    function reactive(data){
+        return new Proxy(data,handleProxy)
+    }
+
+    // 存放所有依赖
+    let globalMap = new WeakMap()
+    let activityEffect = null //用于保存当前所需要被收集的依赖，对标Vue2中new Watcher时将自身保存在Dep的target属性上一样
+
+    class CreateEffect {
+        /**
+         * @param fn 更新试图的函数
+         * @param scheduler 计算属性的更新函数
+         */
+        constructor(fn,scheduler) {
+            this.fn = fn
+            this.scheduler = scheduler;
+        }
+
+        run(){
+            activityEffect = this //将自身设置为当前需要被收集的依赖
+            const res = this.fn()
+            activityEffect = null
+            return res
+        }
+    }
+    // 收集依赖
+    function track(target, key){
+        if(!activityEffect) return;
+        // 1. 获取 target 对应的依赖映射
+        let effectMap = globalMap.get(target);
+        if(!effectMap) globalMap.set(target, ( effectMap = new Map() ));
+        // 2. 获取 key 对应的依赖集合
+        let effectSet = effectMap.get(key);
+        if(!effectSet) effectMap.set(key, ( effectSet = new Set() ));
+        // 3. 收集依赖
+        effectSet.add(activityEffect);
+    }
+    // 触发依赖
+    function trigger(target, key){
+        // 1. 获取 target 对应的依赖映射
+        const effectMap = globalMap.get(target);
+        if(!effectMap) return;
+        // 2. 获取 key 对应的依赖集合
+        const effectSet = effectMap.get(key);
+        if(!effectSet) return;
+        // 3. 触发依赖
+        effectSet.forEach((effect) => effect.scheduler ? effect.scheduler() : effect.run());
+    }
+    // 生成依赖实例
+    function effect(fn,options){
+        const _effect = new CreateEffect(fn,options?.scheduler)
+        _effect.run()
+        return _effect.run.bind(_effect);
+    }
+    const data = reactive({
+        name:''
+    })
+
+    const input = document.getElementById("input");
+
+    input.addEventListener("change", (event) => {
+        data.name = event.target.value
+    });
+    function updateView (){
+        const dom = document.getElementById('text')
+        dom.innerText = data.name
+    }
+    effect(updateView)
+
+    class createComputed{
+        constructor(getter) {
+            this._effect = new CreateEffect(getter,()=>this.isCache = true)
+            this.isCache = true
+            this._value = null
+        }
+        get value(){
+            if(this.isCache){
+                this.isCache = false
+                this._value = this._effect.run()
+            }
+            return this._value
+        }
+        set value(val){
+            throw new Error('计算属性不允许赋值！')
+        }
+    }
+
+    function computed(getter){
+        return new createComputed(getter)
+    }
+
+    function Watch (fn,cb,opt){
+        let _effect
+        let oldVal
+        function job (){
+            const value = _effect.run()
+            cb(value,oldVal)
+            oldVal = value
+        }
+        _effect = new CreateEffect(fn,()=>job())
+        oldVal = _effect.run()
+    }
+</script>
+
+</body>
+</html>
