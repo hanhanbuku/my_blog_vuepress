@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<canvas id="myCanvas" width="400" height="400"></canvas>
+<div class="circle">
+    <div class="arc"></div>
+</div>
+
+<script>
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+
+    function drawArc(rotationAngle) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        var x = canvas.width / 2;
+        var y = canvas.height / 2;
+        var radius = 250;
+        var startAngle = 0;
+        var endAngle = Math.PI * 0.5; // 90度
+
+        ctx.beginPath();
+        ctx.arc(x, y, radius, startAngle + rotationAngle, endAngle + rotationAngle);
+        ctx.lineWidth = 10;
+        ctx.strokeStyle = "blue";
+        ctx.stroke();
+    }
+
+    function animate() {
+        var rotationAngle = 0;
+
+        function frame() {
+            rotationAngle += 0.02; // 每帧增加的旋转角度
+            drawArc(rotationAngle);
+            requestAnimationFrame(frame);
+        }
+
+        frame();
+    }
+
+    animate();
+</script>
+</body>
+<style>
+    .circle {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .arc {
+        width: 200px;
+        height: 100px;
+        background-color: blue;
+        border-radius: 0 0 50% 50%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform-origin: center top;
+        animation: rotate-arc 4s linear infinite;
+    }
+
+    @keyframes rotate-arc {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(180deg);
+        }
+    }
+</style>
+</html>
